@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Haven</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0 auto;
+            
+        }
+
+        #login-page, #content {
+            display: none;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: 0 20px 0 20px;
+        }
+        
+        #login-page:hover, #content:hover{
+            box-shadow: 0 0 40px #50ff00, 0 0 40px #50ff00;
+            transition: 2s;
+        }
+
+        #login-page.active, #content.active {
+            display: block;
+        }
+
+        input[type="password"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 1200px) {
+            #login-page, #content {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            #login-page, #content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #login-page, #content {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #login-page, #content {
+                width: 100%;
+                margin: 0;
+                padding: 10px;
+                border-radius: 0;
+            }
+
+            input[type="password"] {
+                width: calc(100% - 20px);
+                padding: 8px;
+                margin: 15px 0;
+            }
+
+            button {
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            #login-page, #content {
+                width: 90%;
+                padding: 5px;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            input[type="password"] {
+                width: calc(100% - 10px);
+                padding: 5px;
+                margin: 10px 0;
+            }
+
+            button {
+                padding: 5px 10px;
+            }
+        }
+        
+        
+        
+        
+       .head{
+           width: 90%;
+           background: #50ff00;
+           height: auto;
+           margin: 0 auto;
+           color: black;
+           padding: 20px;
+           border-radius: 20px;
+       }
+       
+      .head hr{
+          background: #000000b4;
+          height: 1px;
+          border: 1px solid #7aff00;
+      }
+      
+     .head h1{
+         font-size: 40px;
+     }
+        
+        
+        
+ 
+       .container h1 {
+            color: #333;
+        }
+      .container  table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+        }
+    .container    table, th, td {
+            border: 1px solid #ddd;
+        }
+       .container th, td {
+            padding: 12px;
+            text-align: left;
+        }
+    .container    th {
+            background-color: #4CAF50;
+            color: white;
+        }
+.container        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="login-page" class="active">
+        <h1>Login</h1>
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="checkPassword()">Login</button>
+    </div>
+
+    <div id="content">
+        
+        <div class="head">
+            <h1>Main</h1>
+            <p>All Code and Database Link</p>
+            <hr>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <div class="container">
+        <h1>Database</h1>
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Link</th>
+                <th>Code</th>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>Code and Database Link</td>
+                <td><a href="#">x</a></td>
+                <td>cdlir</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>x</td>
+                <td><a href="#">x</a></td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>x</td>
+                <td><a href="#">x</a></td>
+                <td>x</td>
+            </tr>
+        </table>
+    </div>
+    
+    
+    
+       
+        
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            if (password === 'aliHk') {
+                document.getElementById('login-page').classList.remove('active');
+                document.getElementById('content').classList.add('active');
+            } else {
+                alert('Incorrect Password!');
+            }
+        }
+    </script>
+</body>
+</html>
